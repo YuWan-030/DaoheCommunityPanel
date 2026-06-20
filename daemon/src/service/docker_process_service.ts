@@ -61,7 +61,7 @@ export class SetupDockerContainer extends AsyncTask {
     if (!fs.existsSync(this.instance.absoluteCwdPath())) {
       await fs.mkdirs(instance.absoluteCwdPath());
     }
-    // Because some accounts inside the container may be different from the account running MCSManager,
+    // Because some accounts inside the container may be different from the account running 稻荷社区,
     // not setting permissions to 777 may cause failure to install any files properly.
     fs.chmod(this.instance.absoluteCwdPath(), 0o777).catch(() => {
       logger.error(

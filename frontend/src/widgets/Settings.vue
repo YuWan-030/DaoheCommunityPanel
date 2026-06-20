@@ -15,18 +15,12 @@ import { reportErrorMsg } from "@/tools/validator";
 import type { LayoutCard, Settings } from "@/types";
 import {
   ApiOutlined,
-  BankOutlined,
-  BookOutlined,
-  BugOutlined,
   EditOutlined,
-  GithubOutlined,
   LockOutlined,
-  MessageOutlined,
   MoneyCollectOutlined,
   PicLeftOutlined,
   PlusOutlined,
-  ProjectOutlined,
-  QuestionCircleOutlined
+  ProjectOutlined
 } from "@ant-design/icons-vue";
 import { Modal, message, notification } from "ant-design-vue";
 import { computed, onMounted, onUnmounted, ref } from "vue";
@@ -53,20 +47,6 @@ const sidebarPositionOptions = [
   { label: t("TXT_CODE_SETTINGS_LAYOUT_SIDEBAR_POSITION_LEFT"), value: "left" as const },
   { label: t("TXT_CODE_SETTINGS_LAYOUT_SIDEBAR_POSITION_RIGHT"), value: "right" as const }
 ];
-
-const ApacheLicense = `Copyright ${new Date().getFullYear()} MCSManager
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.`;
 
 const formData = ref<MySettings>();
 
@@ -139,11 +119,6 @@ const menus = arrayFilter([
       if (isCN()) url = "https://afdian.com/a/mcsmanager";
       window.open(url, "_blank");
     }
-  },
-  {
-    title: t("TXT_CODE_3b4b656d"),
-    key: "about",
-    icon: QuestionCircleOutlined
   }
 ]);
 
@@ -172,37 +147,6 @@ const totpDriftOptions = ref([
   {
     label: "60 s",
     value: 2
-  }
-]);
-
-const aboutLinks = arrayFilter([
-  {
-    title: "GitHub",
-    icon: GithubOutlined,
-    url: "https://github.com/MCSManager/MCSManager"
-  },
-  {
-    title: "Discord",
-    icon: MessageOutlined,
-    url: "https://discord.gg/BNpYMVX7Cd"
-  }
-]);
-
-const contacts = arrayFilter([
-  {
-    title: t("TXT_CODE_41dd4d19"),
-    icon: BankOutlined,
-    url: "https://mcsmanager.com/"
-  },
-  {
-    title: t("TXT_CODE_74c3d3e5"),
-    icon: BookOutlined,
-    url: "https://docs.mcsmanager.com/"
-  },
-  {
-    title: t("TXT_CODE_26407d1f"),
-    icon: BugOutlined,
-    url: "https://github.com/MCSManager/MCSManager/issues"
   }
 ]);
 
@@ -327,7 +271,7 @@ const isSsoIdentityChanged = (): boolean => {
   if (curType === "oidc" && (fd.ssoIssuer || "") !== snap.ssoIssuer) return true;
   if (curType === "oauth2") {
     if ((fd.ssoUserinfoUrl || "") !== snap.ssoUserinfoUrl) return true;
-    if ((fd.ssoUserIdField || "id") !== snap.ssoUserIdField) return true;
+    if ((fd.ssoUserIdField || "data.user_id") !== snap.ssoUserIdField) return true;
   }
   return false;
 };
@@ -340,7 +284,7 @@ const doSubmitSso = async () => {
       ssoType: fd.ssoType || "oidc",
       ssoIssuer: fd.ssoIssuer || "",
       ssoUserinfoUrl: fd.ssoUserinfoUrl || "",
-      ssoUserIdField: fd.ssoUserIdField || "id"
+      ssoUserIdField: fd.ssoUserIdField || "data.user_id"
     };
   }
 };
@@ -402,7 +346,7 @@ onMounted(async () => {
     ssoType: fd.ssoType || "oidc",
     ssoIssuer: fd.ssoIssuer || "",
     ssoUserinfoUrl: fd.ssoUserinfoUrl || "",
-    ssoUserIdField: fd.ssoUserIdField || "id"
+    ssoUserIdField: fd.ssoUserIdField || "data.user_id"
   };
   if (cfg?.theme?.logoImage) {
     formData.value.logoUrl = cfg.theme.logoImage;
@@ -1059,7 +1003,7 @@ onUnmounted(() => {
                         <a-input
                           v-model:value="(formData as any).ssoUserIdField"
                           style="max-width: 320px"
-                          placeholder="id"
+                          placeholder="data.user_id"
                         />
                       </a-form-item>
 
@@ -1175,50 +1119,6 @@ onUnmounted(() => {
 
           <template #redeem>
             <IframeBox :src="getProPanelUrl('/')" :height="card.height" />
-          </template>
-
-          <template #about>
-            <div class="content-box" :style="{ maxHeight: card.height }">
-              <a-typography-title :level="4" class="mb-24">
-                {{ t("TXT_CODE_3b4b656d") }}
-              </a-typography-title>
-              <a-typography-paragraph>
-                <p>
-                  {{ $t("TXT_CODE_d0c670df") }}
-                </p>
-              </a-typography-paragraph>
-              <div class="pb-4 flex">
-                <div v-for="item in aboutLinks" :key="item.url" class="mr-12 mb-12">
-                  <a :href="item.url" target="_blank">
-                    <a-button>
-                      <component :is="item.icon" />
-                      {{ item.title }}
-                    </a-button>
-                  </a>
-                </div>
-              </div>
-              <a-typography-paragraph>
-                <p>
-                  {{ $t("TXT_CODE_97433ac4") }}
-                </p>
-              </a-typography-paragraph>
-              <div class="pb-4 flex">
-                <div v-for="item in contacts" :key="item.url" class="mr-12 mb-12">
-                  <a :href="item.url" target="_blank">
-                    <a-button>
-                      <component :is="item.icon" />
-                      {{ item.title }}
-                    </a-button>
-                  </a>
-                </div>
-              </div>
-              <a-typography-paragraph>
-                <p>
-                  {{ $t("TXT_CODE_e57bd50f") }}
-                </p>
-                <pre style="font-size: 13px">{{ ApacheLicense }}</pre>
-              </a-typography-paragraph>
-            </div>
           </template>
 
           <template #sponsor>

@@ -1,7 +1,7 @@
 {
   "name": "mcsmanager-common",
   "version": "1.2.0",
-  "description": "MCSManager Common layer",
+  "description": "稻荷社区 Common layer",
   "main": "dist/index.js",
   "homepage": "https://mcsmanager.com/",
   "author": "https://github.com/yumao233",

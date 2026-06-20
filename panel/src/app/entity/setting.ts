@@ -82,7 +82,7 @@ export default class SystemConfig {
   ssoAuthorizeUrl = "";
   ssoTokenUrl = "";
   ssoUserinfoUrl = "";
-  ssoUserIdField = "id";
+  ssoUserIdField = "data.user_id";
   ssoScopes = "";
   // Shared
   ssoClientId = "";

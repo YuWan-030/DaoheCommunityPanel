@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://mcsmanager.com/" target="_blank">
-    <img src="https://public-link.oss-cn-shenzhen.aliyuncs.com/mcsm_picture/logo.png" alt="MCSManagerLogo.png" width="510px" />    
+    <img src="https://public-link.oss-cn-shenzhen.aliyuncs.com/mcsm_picture/logo.png" alt="稻荷社区Logo.png" width="510px" />
   </a>
 
   <br />
@@ -28,9 +28,9 @@
 
 ## What is this?
 
-**MCSManager Panel** (or simply **MCSM Panel**) is a fast-deploying, distributed, multi-user, and modern web-based management panel for **`Minecraft`**, **`Steam`**, and other game servers.
+**稻荷社区 Panel** (or simply **MCSM Panel**) is a fast-deploying, distributed, multi-user, and modern web-based management panel for **`Minecraft`**, **`Steam`**, and other game servers.
 
-MCSManager has gained popularity within the **`Minecraft`** and **`Steam`** gaming communities. It enables you to manage multiple physical or virtual servers from a single platform, and offers a **secure**, **reliable**, and **granular multi-user permission system**. The MCSM Panel continues to support server administrators, operators, and independent developers, managing servers like **`Minecraft`**, **`Terraria`**, and other **`Steam`**-based games for them.
+稻荷社区 has gained popularity within the **`Minecraft`** and **`Steam`** gaming communities. It enables you to manage multiple physical or virtual servers from a single platform, and offers a **secure**, **reliable**, and **granular multi-user permission system**. The MCSM Panel continues to support server administrators, operators, and independent developers, managing servers like **`Minecraft`**, **`Terraria`**, and other **`Steam`**-based games for them.
 
 MCSM also has **commercial applications** in mind, such as private server hosting and sales by **IDC service providers**. Several small and medium-sized enterprises already use the panel as a combined **server management** and **sales platform**. In addition, it supports **multi-language environments**, making it accessible to users across different countries and regions.
 
@@ -107,7 +107,7 @@ systemctl stop mcsm-{web,daemon}  # Stop panel
 
 **Linux Manual Installation**
 
-- If the one-click installation method doesn't work, you can install MCSManager manually by following the steps below:
+- If the one-click installation method doesn't work, you can install 稻荷社区 manually by following the steps below:
 
 ```bash
 # Step 1: Navigate to the installation directory (create it if it doesn't exist)
@@ -121,11 +121,11 @@ tar -xvf node-v20.11.0-linux-x64.tar.xz
 ln -s /opt/node-v20.11.0-linux-x64/bin/node /usr/bin/node
 ln -s /opt/node-v20.11.0-linux-x64/bin/npm /usr/bin/npm
 
-# Step 3: Prepare the MCSManager installation directory
+# Step 3: Prepare the 稻荷社区 installation directory
 mkdir /opt/mcsmanager/
 cd /opt/mcsmanager/
 
-# Step 4: Download the latest MCSManager release
+# Step 4: Download the latest 稻荷社区 release
 wget https://github.com/MCSManager/MCSManager/releases/latest/download/mcsmanager_linux_release.tar.gz
 tar -zxf mcsmanager_linux_release.tar.gz
 
@@ -151,7 +151,7 @@ http://<public IP>:23333/
 > The above steps do **not** register the panel as a system service.  
 > To keep it running in the background, you’ll need to use tools like **`screen`** or **`tmux`**.
 
-If you prefer to run MCSManager as a system service, please refer to the official documentation for setup instructions.
+If you prefer to run 稻荷社区 as a system service, please refer to the official documentation for setup instructions.
 
 <br />
 
@@ -271,7 +271,7 @@ Once resolved, we will credit the discoverer in the relevant code or release not
 
 ### Acknowledgements
 
-Thanks to the following developers for making important contributions to the security testing of MCSManager!
+Thanks to the following developers for making important contributions to the security testing of 稻荷社区!
 
 > [@Cuo256](https://github.com/Cuo256), [@xiaosu](https://github.com/xiaosuawa), [@tianjiefeifei](https://github.com/tianjiefeifei)
 
@@ -315,7 +315,7 @@ See: [DEVELOPMENT.md](./DEVELOPMENT.md)
 
 ## Browser Compatibility
 
-MCSManager supports all major modern browsers, including:
+稻荷社区 supports all major modern browsers, including:
 
 - `Chrome`
 - `Firefox`
@@ -332,6 +332,12 @@ MCSManager supports all major modern browsers, including:
 <a href="https://openomy.com/MCSManager/MCSManager" target="_blank" style="display: block; width: 100%;" align="center">
   <img src="https://openomy.com/svg?repo=MCSManager/MCSManager&chart=bubble&latestMonth=12" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
 </a>
+
+## Fork Notice
+
+This repository contains a customized distribution derived from MCSManager.
+The upstream copyright and Apache License 2.0 terms are retained. See
+[MODIFICATIONS.md](./MODIFICATIONS.md) for a summary of local changes.
 
 ## License
 

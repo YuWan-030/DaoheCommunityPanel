@@ -1,12 +1,12 @@
 ## 搭建开发环境
 
-此段落**面向开发人员**，如果你想对 MCSManager 进行开发，或者提交代码贡献，请务必仔细的阅读这些内容：
+此段落**面向开发人员**，如果你想对 稻荷社区 进行开发，或者提交代码贡献，请务必仔细的阅读这些内容：
 
 ### 所需环境
 
 - Node.js v16+
 
-我们使用 `Visual Studio Code` 开发 MCSManager，我们**极力推荐**这些插件：
+我们使用 `Visual Studio Code` 开发 稻荷社区，我们**极力推荐**这些插件：
 
 - i18n 文案显示支持（I18n Ally）
 - 代码格式化（Prettier）
@@ -21,7 +21,7 @@
 
 ```bash
 git clone https://github.com/MCSManager/MCSManager.git
-cd MCSManager
+cd 稻荷社区
 ```
 
 #### 2. 下载二进制依赖文件
@@ -65,7 +65,7 @@ wget https://github.com/MCSManager/Zip-Tools/releases/download/latest/7z_linux_x
 ./install-dependents.bat
 ```
 
-#### 4. 运行 MCSManager
+#### 4. 运行 稻荷社区
 
 ```bash
 npm run dev

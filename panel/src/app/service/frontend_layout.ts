@@ -65,7 +65,7 @@ function getDefaultFrontendLayoutConfig(): IPageLayoutConfig[] {
       page: "__settings__",
       items: [],
       theme: {
-        pageTitle: "MCSManager Panel",
+        pageTitle: "稻荷社区",
         logoImage: "",
         backgroundImage: "",
         sidebarPosition: "right"

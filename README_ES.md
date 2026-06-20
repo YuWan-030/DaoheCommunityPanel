@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://mcsmanager.com/" target="_blank">
-    <img src="https://public-link.oss-cn-shenzhen.aliyuncs.com/mcsm_picture/logo.png" alt="MCSManagerLogo.png" width="510px" />    
+    <img src="https://public-link.oss-cn-shenzhen.aliyuncs.com/mcsm_picture/logo.png" alt="稻荷社区Logo.png" width="510px" />
   </a>
 
   <br />
@@ -29,9 +29,9 @@
 
 ## ¿Qué es esto?
 
-**MCSManager Panel** (abreviado: MCSM Panel) es un panel de administración web moderno, simple, multi-usuario, compatible con arquitectura distribuida y de despliegue rápido para servidores de juegos Minecraft y Steam.
+**稻荷社区 Panel** (abreviado: MCSM Panel) es un panel de administración web moderno, simple, multi-usuario, compatible con arquitectura distribuida y de despliegue rápido para servidores de juegos Minecraft y Steam.
 
-MCSManager ha ganado popularidad dentro de las comunidades de juegos `Minecraft` y `Steam`. Te ayuda a gestionar centralmente múltiples servidores físicos, permitiéndote crear servidores de juegos en cualquier host, y proporciona un sistema de permisos multi-usuario seguro y confiable que puede ayudarte fácilmente a gestionar múltiples servidores. Ha estado proporcionando soporte de software saludable para administradores, personal de operaciones y desarrolladores individuales de servidores de juegos `Minecraft`, `Terraria` y `Steam`.
+稻荷社区 ha ganado popularidad dentro de las comunidades de juegos `Minecraft` y `Steam`. Te ayuda a gestionar centralmente múltiples servidores físicos, permitiéndote crear servidores de juegos en cualquier host, y proporciona un sistema de permisos multi-usuario seguro y confiable que puede ayudarte fácilmente a gestionar múltiples servidores. Ha estado proporcionando soporte de software saludable para administradores, personal de operaciones y desarrolladores individuales de servidores de juegos `Minecraft`, `Terraria` y `Steam`.
 
 También es adecuado para cualquier actividad comercial, como proveedores de servicios IDC para venta de servidores privados, etc. Varias pequeñas y medianas empresas ya están usando este panel como software de gestión y ventas, y soporta idiomas de **múltiples países**.
 
@@ -52,7 +52,7 @@ También es adecuado para cualquier actividad comercial, como proveedores de ser
 3. La interfaz web soporta diseño de tarjetas de arrastrar y soltar para crear tu diseño de interfaz preferido.
 4. Soporta todas las imágenes en `Docker Hub`, soporta multi-usuario, soporta servicios de venta de instancias comerciales.
 5. Soporta arquitectura distribuida, una interfaz web puede gestionar múltiples máquinas simultáneamente.
-6. Pila tecnológica simple, ¡solo necesitas dominar TypeScript para completar todo el desarrollo de MCSManager!
+6. Pila tecnológica simple, ¡solo necesitas dominar TypeScript para completar todo el desarrollo de 稻荷社区!
 7. Más...
 
 <br />
@@ -124,7 +124,7 @@ ln -s /opt/node-v20.11.0-linux-x64/bin/npm /usr/bin/npm
 mkdir /opt/mcsmanager/
 cd /opt/mcsmanager/
 
-# Descargar MCSManager.
+# Descargar 稻荷社区.
 wget https://github.com/MCSManager/MCSManager/releases/latest/download/mcsmanager_linux_release.tar.gz
 tar -zxf mcsmanager_linux_release.tar.gz
 
@@ -144,7 +144,7 @@ chmod 775 install.sh
 # Generalmente, la aplicación web escaneará automáticamente y se conectará al daemon local.
 ```
 
-Este método de instalación no registra automáticamente el panel en los servicios del sistema, por lo que debes usar software `screen` para gestionarlo. Si quieres que el servicio del sistema tome control de MCSManager, por favor consulta la documentación.
+Este método de instalación no registra automáticamente el panel en los servicios del sistema, por lo que debes usar software `screen` para gestionarlo. Si quieres que el servicio del sistema tome control de 稻荷社区, por favor consulta la documentación.
 
 <br />
 
@@ -243,11 +243,11 @@ En ese momento, si entras al panel, deberías ver algunos errores porque el lado
 
 ## Desarrollo
 
-**Esta sección es para desarrolladores.** Si quieres hacer desarrollo secundario en MCSManager o enviar contribuciones de código, por favor lee cuidadosamente estos contenidos:
+**Esta sección es para desarrolladores.** Si quieres hacer desarrollo secundario en 稻荷社区 o enviar contribuciones de código, por favor lee cuidadosamente estos contenidos:
 
 ### Requerido
 
-Usamos `Visual Studio Code` para desarrollar MCSManager. Debes **instalar** estos plugins:
+Usamos `Visual Studio Code` para desarrollar 稻荷社区. Debes **instalar** estos plugins:
 
 - Soporte de visualización de texto i18n (I18n Ally)
 - Formato de código (Prettier)

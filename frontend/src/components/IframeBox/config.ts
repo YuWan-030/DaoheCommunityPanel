@@ -6,7 +6,7 @@ export interface IframeEvent {
   id: string;
   source: string;
   data: any;
-  app: "MCSManager";
+  app: "稻荷社区";
 }
 
 /* eslint-disable no-unused-vars */
@@ -34,7 +34,7 @@ export function useIframeEventListener(iframe: Ref<HTMLIFrameElement | null>) {
   globalIframeList.set(iframeId, iframe);
   const handler = async (event: MessageEvent) => {
     const cfg = event.data as Partial<IframeEvent>;
-    if (cfg?.app === "MCSManager" && cfg?.id) {
+    if (cfg?.app === "稻荷社区" && cfg?.id) {
       return await iframeEventDispatch(cfg);
     }
   };

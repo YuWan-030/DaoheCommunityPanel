@@ -15,7 +15,7 @@ interface IPackageInfo {
 
 // A business platform for selling instances released by the MCSManager Dev Team.
 // Currently, it only supports some countries and regions.
-// If you do not turn on "Business Mode", MCSManager will not send any data.
+// If you do not turn on "Business Mode", 稻荷社区 will not send any data.
 export const REDEEM_PLATFORM_ADDR = "http://localhost:3000";
 
 const PACKAGE_JSON = "package.json";

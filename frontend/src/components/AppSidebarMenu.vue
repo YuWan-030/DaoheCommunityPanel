@@ -120,14 +120,15 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
   padding-top: 10px;
   padding-bottom: 18px;
   img {
-    height: 20px;
+    width: 176px;
+    height: 34px;
+    object-fit: contain;
     animation: MasterLogoWobble 10s ease infinite;
   }
 }
 
 .left-sidebar:hover {
   width: 246px;
-  background-position-x: -20px;
 }
 
 .left-sidebar {
@@ -135,11 +136,13 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
   flex-direction: column;
   flex: 0 0 240px;
   text-align: left;
-  border-right: 1px solid var(--color-gray-5);
-  background-image: url("@/assets/side.png");
+  border-right: 1px solid rgba(236, 164, 82, 0.22);
+  background:
+    linear-gradient(160deg, rgba(236, 164, 82, 0.16), rgba(47, 162, 147, 0.08) 46%, transparent 72%),
+    linear-gradient(180deg, #31191f 0%, #1b171c 100%);
   padding: 20px 12px;
   transition: all 0.3s ease;
-  background-position-x: -80px;
+  box-shadow: 8px 0 24px rgba(40, 12, 14, 0.16);
 }
 
 .sidebar-menu {
@@ -147,7 +150,7 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
   flex-direction: column;
   align-items: flex-start;
   padding: 8px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(246, 238, 227, 0.82);
   flex: 1;
   gap: 8px;
   width: 100%;
@@ -165,13 +168,19 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
   border-radius: 6px;
   transition: all 0.4s ease;
   width: 100%;
+  border: 1px solid transparent;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.178);
+    background-color: rgba(255, 240, 214, 0.1);
+    border-color: rgba(236, 164, 82, 0.2);
+    color: #fff6e8;
   }
 
   &.sidebar-item-active {
-    background-color: rgba(255, 255, 255, 0.22);
+    background: linear-gradient(135deg, rgba(236, 164, 82, 0.24), rgba(200, 58, 60, 0.18));
+    border-color: rgba(236, 164, 82, 0.34);
+    color: #ffffff;
+    box-shadow: inset 3px 0 0 rgba(236, 164, 82, 0.9);
   }
 
   .sidebar-item-icon {
@@ -189,7 +198,7 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
 
 .sidebar-divider {
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(90deg, transparent, rgba(236, 164, 82, 0.28), transparent);
   margin: 12px 0;
   flex-shrink: 0;
   width: 100%;
@@ -197,15 +206,18 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
 
 /* Same semantic highlight as AppHeader */
 :deep(.nav-button-warning:hover) {
-  background-color: rgba(255, 193, 7, 0.2) !important;
+  background-color: rgba(236, 164, 82, 0.2) !important;
+  color: #ffe7b5 !important;
 }
 
 :deep(.nav-button-success:hover) {
-  background-color: rgba(64, 156, 216, 0.15) !important;
+  background-color: rgba(47, 162, 147, 0.18) !important;
+  color: #d2fff6 !important;
 }
 
 :deep(.nav-button-danger:hover) {
-  background-color: rgba(255, 25, 17, 0.25) !important;
+  background-color: rgba(200, 58, 60, 0.28) !important;
+  color: #ffe0de !important;
 }
 
 @keyframes MasterLogoWobble {

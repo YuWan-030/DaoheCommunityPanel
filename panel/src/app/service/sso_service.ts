@@ -198,6 +198,13 @@ async function oauth2Userinfo(accessToken: string): Promise<Record<string, unkno
   return (await res.json()) as Record<string, unknown>;
 }
 
+function getValueByPath(source: Record<string, unknown>, path: string): unknown {
+  return path.split(".").reduce<unknown>((current, key) => {
+    if (current == null || typeof current !== "object") return undefined;
+    return (current as Record<string, unknown>)[key];
+  }, source);
+}
+
 export async function handleOAuth2Callback(
   code: string,
   codeVerifier: string,
@@ -209,8 +216,8 @@ export async function handleOAuth2Callback(
   const accessToken = await oauth2TokenExchange(code, codeVerifier, redirectUri);
   const userinfo = await oauth2Userinfo(accessToken);
 
-  const idField = systemConfig.ssoUserIdField || "id";
-  const userId = userinfo[idField];
+  const idField = systemConfig.ssoUserIdField || "data.user_id";
+  const userId = getValueByPath(userinfo, idField);
   if (userId == null || userId === "") {
     throw new Error(`OAuth 2.0 userinfo response missing field: ${idField}`);
   }

@@ -17,7 +17,7 @@ import {
   FileZipOutlined,
   FolderOpenOutlined
 } from "@ant-design/icons-vue";
-import { Divider, Flex, Tour } from "ant-design-vue";
+import { Flex, Tour } from "ant-design-vue";
 import Link from "ant-design-vue/es/typography/Link";
 import { ref } from "vue";
 
@@ -143,10 +143,6 @@ const openEditor = () => {
             <p style="opacity: 0.6">
               <Link target="_blank" @click="openEditor">
                 {{ t("TXT_CODE_85c10fde") }}
-              </Link>
-              <Divider type="vertical" />
-              <Link href="https://github.com/MCSManager/Script/issues/77" target="_blank">
-                {{ t("TXT_CODE_709c2db4") }}
               </Link>
             </p>
           </Flex>

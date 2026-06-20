@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import logo from "@/assets/logo.png";
 import { useHeaderMenus } from "@/hooks/useHeaderMenus";
 import { useScreen } from "@/hooks/useScreen";
 import { useAppConfigStore } from "@/stores/useAppConfigStore";
@@ -48,7 +47,7 @@ const openPhoneMenu = (b = false) => {
       <nav class="btns">
         <a href="." style="margin-right: 12px">
           <div class="logo">
-            <img :src="logoImage" style="height: 18px" />
+            <img :src="logoImage" style="height: 32px" />
           </div>
         </a>
 
@@ -132,7 +131,7 @@ const openPhoneMenu = (b = false) => {
             </div>
           </div>
           <div>
-            <img :src="logo" style="height: 18px" />
+            <img :src="logoImage" style="height: 32px; max-width: 160px; object-fit: contain" />
           </div>
           <div style="width: 100px" class="justify-end">
             <div v-for="(item, index) in appMenus" :key="index">
@@ -176,23 +175,26 @@ const openPhoneMenu = (b = false) => {
 @import "@/assets/global.scss";
 
 .nav-button-warning:hover {
-  background-color: rgba(255, 193, 7, 0.34) !important;
+  background-color: rgba(236, 164, 82, 0.2) !important;
+  color: #ffe7b5 !important;
 }
 
 .nav-button-success:hover {
-  background-color: rgba(64, 156, 216, 0.12) !important;
+  background-color: rgba(47, 162, 147, 0.18) !important;
+  color: #d2fff6 !important;
 }
 
 .nav-button-danger:hover {
-  background-color: #ff19116f !important;
+  background-color: rgba(200, 58, 60, 0.28) !important;
+  color: #ffe0de !important;
 }
 
 .nav-button-primary:hover {
-  background-color: rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(236, 164, 82, 0.18) !important;
 }
 
 .nav-button-success:hover {
-  background-color: #48e6635a !important;
+  background-color: rgba(47, 162, 147, 0.18) !important;
 }
 
 .phone-menu {
@@ -231,15 +233,18 @@ const openPhoneMenu = (b = false) => {
 }
 
 .app-header-wrapper {
-  box-shadow: 0 2px 4px 0 var(--card-shadow-color);
-  background-image: url("@/assets/side.png");
+  box-shadow: 0 10px 24px rgba(40, 12, 14, 0.2);
+  background:
+    linear-gradient(90deg, rgba(236, 164, 82, 0.16), rgba(47, 162, 147, 0.08) 42%, transparent),
+    linear-gradient(180deg, rgba(47, 23, 27, 0.96), rgba(22, 18, 22, 0.94));
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--app-header-bg);
+  background-color: #26171b;
   backdrop-filter: saturate(180%) blur(20px);
-  color: var(--app-header-text-color);
+  color: #f6eee3;
+  border-bottom: 1px solid rgba(236, 164, 82, 0.22);
 
   position: fixed;
   top: 0;
@@ -273,13 +278,14 @@ const openPhoneMenu = (b = false) => {
     margin: 0 4px;
     font-size: 14px;
     transition: all 0.4s;
-    color: var(--app-header-text-color) !important;
+    color: rgba(246, 238, 227, 0.78) !important;
     text-align: center;
     padding: 8px 12px;
     min-width: 40px;
     cursor: pointer;
     border-radius: 6px;
     user-select: none;
+    border: 1px solid transparent;
   }
 
   .right-nav-button {
@@ -292,11 +298,16 @@ const openPhoneMenu = (b = false) => {
     font-size: 16px !important;
   }
   .nav-button:hover {
-    background-color: rgba(215, 215, 215, 0.261);
+    background-color: rgba(255, 240, 214, 0.1);
+    border-color: rgba(236, 164, 82, 0.18);
+    color: #fff6e8 !important;
   }
 
   .nav-button-active {
-    background-color: rgba(215, 215, 215, 0.35);
+    background: linear-gradient(135deg, rgba(236, 164, 82, 0.24), rgba(200, 58, 60, 0.18));
+    border-color: rgba(236, 164, 82, 0.34);
+    color: #ffffff !important;
+    box-shadow: inset 0 -2px 0 rgba(236, 164, 82, 0.8);
   }
 
   .logo {

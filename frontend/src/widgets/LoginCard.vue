@@ -235,7 +235,7 @@ onMounted(async () => {
                   ></div>
                   Powered by
                   <a href="https://mcsmanager.com" target="_blank" rel="noopener noreferrer">
-                    MCSManager
+                    稻荷社区
                   </a>
                 </div>
                 <div v-else></div>

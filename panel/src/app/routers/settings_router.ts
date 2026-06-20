@@ -80,7 +80,7 @@ router.put("/setting", permission({ level: ROLE.ADMIN }), async (ctx) => {
     const prevSsoType = systemConfig.ssoType || "oidc";
     const prevSsoIssuer = systemConfig.ssoIssuer;
     const prevSsoUserinfoUrl = systemConfig.ssoUserinfoUrl;
-    const prevSsoUserIdField = systemConfig.ssoUserIdField || "id";
+    const prevSsoUserIdField = systemConfig.ssoUserIdField || "data.user_id";
 
     // SSO type
     if (config.ssoType != null) {
@@ -139,7 +139,7 @@ router.put("/setting", permission({ level: ROLE.ADMIN }), async (ctx) => {
       if (config.ssoClientSecret != null) systemConfig.ssoClientSecret = clientSecret;
     }
 
-    if (config.ssoUserIdField != null) systemConfig.ssoUserIdField = String(config.ssoUserIdField) || "id";
+    if (config.ssoUserIdField != null) systemConfig.ssoUserIdField = String(config.ssoUserIdField) || "data.user_id";
 
     // Unbind all SSO users when identity-critical fields change
     {

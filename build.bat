@@ -25,6 +25,7 @@ mkdir "production-code"
 mkdir "production-code\daemon"
 mkdir "production-code\web"
 mkdir "production-code\web\public"
+mkdir "production-code\prod-scripts"
 
 copy ".\daemon\production\app.js" ".\production-code\daemon\app.js"
 copy ".\daemon\production\app.js.map" ".\production-code\daemon\app.js.map"
@@ -35,8 +36,11 @@ copy ".\panel\production\app.js" ".\production-code\web\app.js"
 copy ".\panel\production\app.js.map" ".\production-code\web\app.js.map"
 copy ".\panel\package.json" ".\production-code\web\package.json"
 copy ".\panel\package-lock.json" ".\production-code\web\package-lock.json"
+copy ".\LICENSE" ".\production-code\LICENSE"
+copy ".\MODIFICATIONS.md" ".\production-code\MODIFICATIONS.md"
 
 xcopy ".\frontend\dist" ".\production-code\web\public" /E /I /H /Y
+xcopy ".\prod-scripts\linux" ".\production-code\prod-scripts\linux" /E /I /H /Y
 
 rd /s /q ".\panel\production"
 rd /s /q ".\daemon\production"

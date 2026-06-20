@@ -1,12 +1,12 @@
 ## Setting Up Development Environment
 
-This section is **for developers**. If you want to develop MCSManager or contribute code, please read this content carefully:
+This section is **for developers**. If you want to develop 稻荷社区 or contribute code, please read this content carefully:
 
 ### Required Environment
 
 - Node.js v16+
 
-We use `Visual Studio Code` to develop MCSManager, we **highly recommend** these plugins:
+We use `Visual Studio Code` to develop 稻荷社区, we **highly recommend** these plugins:
 
 - i18n Text Display Support (I18n Ally)
 - Code Formatting (Prettier)
@@ -21,7 +21,7 @@ We use `Visual Studio Code` to develop MCSManager, we **highly recommend** these
 
 ```bash
 git clone https://github.com/MCSManager/MCSManager.git
-cd MCSManager
+cd 稻荷社区
 ```
 
 #### 2. Download Binary Dependency Files
@@ -65,7 +65,7 @@ wget https://github.com/MCSManager/Zip-Tools/releases/download/latest/7z_linux_x
 ./install-dependents.bat
 ```
 
-#### 4. Run MCSManager
+#### 4. Run 稻荷社区
 
 ```bash
 npm run dev
