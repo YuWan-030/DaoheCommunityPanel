@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://mcsmanager.com/" target="_blank">
-    <img src="https://public-link.oss-cn-shenzhen.aliyuncs.com/mcsm_picture/logo.png" alt="稻荷社区Logo.png" width="510px" />
+    <img src="https://github.com/YuWan-030/DaoheCommunityPanel/blob/main/frontend/src/assets/logo.png" alt="稻荷社区Logo.png" width="510px" />
   </a>
 
   <br />
