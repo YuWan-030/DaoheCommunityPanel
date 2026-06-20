@@ -122,8 +122,10 @@ WantedBy=multi-user.target
 EOF
 
 systemctl daemon-reload
-systemctl enable --now "${APP_NAME}-daemon.service"
-systemctl enable --now "${APP_NAME}-web.service"
+systemctl enable "${APP_NAME}-daemon.service"
+systemctl enable "${APP_NAME}-web.service"
+systemctl restart "${APP_NAME}-daemon.service"
+systemctl restart "${APP_NAME}-web.service"
 
 echo "------------"
 echo "Installed successfully."
