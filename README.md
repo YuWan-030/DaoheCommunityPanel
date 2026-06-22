@@ -90,7 +90,7 @@ Double-click `start.bat` to launch both the web panel and daemon process.
 **One-line command quick installation**
 
 ```bash
-sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
+sudo su -c "wget -qO- https://github.com/YuWan-030/DaoheCommunityPanel/releases/latest/download/setup.sh | bash"
 ```
 
 **Usage after installation**
